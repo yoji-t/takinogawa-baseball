@@ -6,6 +6,17 @@
 
 Notion から移した静的な HTML サイトです。ビルドツールや外部サービスは使っていません。`main` ブランチへ push すると、GitHub Actions が GitHub Pages に公開します。
 
+## 最初の1回だけ
+
+リポジトリを作った直後は、Pages がまだ有効になっていません。所有者のアカウントで次を一度だけ行ってください。
+
+1. GitHub でこのリポジトリを開く
+2. **Settings** → **Pages**
+3. **Build and deployment** の **Source** を **GitHub Actions** にする
+4. **Actions** タブの「Deploy GitHub Pages」を開き、失敗している実行の **Re-run jobs** を押す
+
+これ以降は、`main` への push だけで公開されます。反映まで数分かかることがあります。
+
 ## ページ
 
 | ファイル | 内容 |
