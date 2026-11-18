@@ -240,6 +240,26 @@ a:hover { color: var(--stitch); }
   overflow-wrap: anywhere;
 }
 
+.hero-announce {
+  margin: 1.15rem 0 0;
+  max-width: 46rem;
+}
+
+.hero-announce a {
+  display: block;
+  padding: 0.9rem 1rem;
+  background: #fff6e8;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.6;
+  border-radius: 12px;
+  border-left: 6px solid #e09a3e;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hero-announce a:hover { color: var(--ink); background: #fff; }
+
 .page-hero {
   background:
     linear-gradient(160deg, #0c281d 0%, #145c38 70%);
@@ -284,6 +304,12 @@ main { padding-bottom: 3rem; }
   border-left-color: var(--stitch);
 }
 
+.callout-link {
+  display: inline-block;
+  margin-left: 0.75rem;
+  font-weight: 700;
+}
+
 .jump {
   display: grid;
   gap: 0.7rem;
@@ -304,6 +330,11 @@ main { padding-bottom: 3rem; }
 }
 
 .jump a:hover { border-color: var(--grass); color: inherit; }
+
+.jump a.is-featured {
+  border-color: #e09a3e;
+  background: #fff6e8;
+}
 
 .jump-no {
   flex: none;
@@ -394,6 +425,10 @@ main { padding-bottom: 3rem; }
 }
 
 .subnav a:hover { background: #dfd3bc; color: var(--ink); }
+
+.subnav.page-jump { margin: 0.9rem 0 0; }
+
+.tournament + .page-section { margin-top: 2.4rem; }
 
 .more-link { margin: 0.8rem 0 0; }
 
@@ -556,6 +591,8 @@ main { padding-bottom: 3rem; }
   color: var(--outfield);
   font-variant-numeric: tabular-nums;
 }
+
+.side { white-space: nowrap; }
 
 .is-postponed s { color: var(--muted); }
 
@@ -761,13 +798,22 @@ table.results tr:last-child td { border-bottom: 0; }
 @media (max-width: 560px) {
   .games li { display: block; }
   .games li .time { margin-right: 0.4rem; }
+  .games li .match { display: block; }
+  .callout-link {
+    display: block;
+    margin: 0.35rem 0 0;
+  }
 }
 
 @media (min-width: 700px) {
-  .jump { grid-template-columns: repeat(3, 1fr); }
+  .jump { grid-template-columns: repeat(2, 1fr); }
   .photos.pair { grid-template-columns: 1fr 1fr; align-items: start; }
   .info-grid.two { grid-template-columns: 1fr 1fr; }
   .contacts { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1100px) {
+  .jump { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (min-width: 900px) {
